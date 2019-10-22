@@ -15,8 +15,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Items" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sF5-ft-ASH">
+                                <rect key="frame" x="142" y="92" width="131" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KUx-Ja-Zn6">
+                                <rect key="frame" x="224" y="277" width="172" height="30"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Add">
+                                    <color key="titleColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="S4A-Sq-SgH">
-                                <rect key="frame" x="0.0" y="88" width="430" height="499"/>
+                                <rect key="frame" x="-8" y="347" width="430" height="451"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="NMx-0z-iRj" style="IBUITableViewCellStyleDefault" id="YOH-Tl-98k">
@@ -42,42 +55,46 @@
                                     <outlet property="delegate" destination="1rH-bg-xuB" id="PQ9-PY-vOj"/>
                                 </connections>
                             </tableView>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9HH-Z0-wFe">
-                                <rect key="frame" x="20" y="656" width="374" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fDb-CF-cBY">
+                                <rect key="frame" x="20" y="132" width="383" height="114"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="114" id="8Ic-eG-0e0"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add Items" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sF5-ft-ASH">
-                                <rect key="frame" x="142" y="604" width="131" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bsn-47-rKb">
-                                <rect key="frame" x="20" y="721" width="172" height="74"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bsn-47-rKb">
+                                <rect key="frame" x="20" y="277" width="172" height="30"/>
                                 <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="172" id="Had-8T-BiT"/>
+                                </constraints>
                                 <state key="normal" title="Cancel">
-                                    <color key="titleColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KUx-Ja-Zn6">
-                                <rect key="frame" x="224" y="721" width="172" height="74"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Add">
                                     <color key="titleColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="S4A-Sq-SgH" secondAttribute="trailing" constant="-16" id="6eA-dl-cI2"/>
-                            <constraint firstItem="S4A-Sq-SgH" firstAttribute="leading" secondItem="ePB-3C-oPa" secondAttribute="leading" id="YiH-DU-Siw"/>
-                            <constraint firstItem="ePB-3C-oPa" firstAttribute="bottom" secondItem="S4A-Sq-SgH" secondAttribute="bottom" constant="275" id="bCB-vj-q4M"/>
-                            <constraint firstItem="S4A-Sq-SgH" firstAttribute="top" secondItem="ePB-3C-oPa" secondAttribute="top" id="eVB-BB-3BW"/>
+                            <constraint firstItem="ePB-3C-oPa" firstAttribute="trailing" secondItem="KUx-Ja-Zn6" secondAttribute="trailing" constant="18" id="0DZ-lP-OZE"/>
+                            <constraint firstItem="sF5-ft-ASH" firstAttribute="top" secondItem="ePB-3C-oPa" secondAttribute="top" constant="4" id="3Yx-0U-bsl"/>
+                            <constraint firstAttribute="trailing" secondItem="S4A-Sq-SgH" secondAttribute="trailing" constant="-8" id="6JL-Nw-0Yi"/>
+                            <constraint firstItem="KUx-Ja-Zn6" firstAttribute="top" secondItem="fDb-CF-cBY" secondAttribute="bottom" constant="31" id="6aE-8Z-OId"/>
+                            <constraint firstItem="fDb-CF-cBY" firstAttribute="top" secondItem="sF5-ft-ASH" secondAttribute="bottom" constant="16" id="7Xz-CY-vvG"/>
+                            <constraint firstItem="KUx-Ja-Zn6" firstAttribute="leading" secondItem="bsn-47-rKb" secondAttribute="trailing" constant="32" id="DuR-uw-CbJ"/>
+                            <constraint firstItem="S4A-Sq-SgH" firstAttribute="top" secondItem="bsn-47-rKb" secondAttribute="bottom" constant="40" id="KNh-ku-tHy"/>
+                            <constraint firstItem="ePB-3C-oPa" firstAttribute="trailing" secondItem="sF5-ft-ASH" secondAttribute="trailing" constant="141" id="LCX-Fr-yEa"/>
+                            <constraint firstItem="fDb-CF-cBY" firstAttribute="leading" secondItem="ePB-3C-oPa" secondAttribute="leading" constant="20" id="RTw-1s-Rc1"/>
+                            <constraint firstItem="S4A-Sq-SgH" firstAttribute="leading" secondItem="aRT-82-lou" secondAttribute="leading" constant="-8" id="idD-8T-06o"/>
+                            <constraint firstItem="bsn-47-rKb" firstAttribute="top" secondItem="fDb-CF-cBY" secondAttribute="bottom" constant="31" id="j2A-mO-XfL"/>
+                            <constraint firstItem="sF5-ft-ASH" firstAttribute="leading" secondItem="ePB-3C-oPa" secondAttribute="leading" constant="142" id="nwq-6X-aMP"/>
+                            <constraint firstItem="S4A-Sq-SgH" firstAttribute="top" secondItem="KUx-Ja-Zn6" secondAttribute="bottom" constant="40" id="qil-jG-Qhr"/>
+                            <constraint firstItem="ePB-3C-oPa" firstAttribute="bottom" secondItem="S4A-Sq-SgH" secondAttribute="bottom" constant="64" id="rLU-IL-Enw"/>
+                            <constraint firstItem="bsn-47-rKb" firstAttribute="leading" secondItem="ePB-3C-oPa" secondAttribute="leading" constant="20" id="rz1-Sf-rSF"/>
+                            <constraint firstItem="ePB-3C-oPa" firstAttribute="trailing" secondItem="fDb-CF-cBY" secondAttribute="trailing" constant="11" id="xW4-8q-Ggd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ePB-3C-oPa"/>
                     </view>
